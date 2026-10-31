@@ -1,0 +1,25 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Secure Backend AI - API",
+    "description": "API Corporativa de Análise de Logs de Segurança com IA (Gemini)",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/securitys-logs": {
+      "post": {
+        "summary": "Regista e analisa um log de segurança com IA",
+        "responses": {
+          "201": { "description": "Log registado e analisado com sucesso" },
+          "400": { "description": "Erro de validação nos dados" }
+        }
+      },
+      "get": {
+        "summary": "Lista todos os logs de segurança gravados",
+        "responses": {
+          "200": { "description": "Lista de logs retornada com sucesso" }
+        }
+      }
+    }
+  }
+}

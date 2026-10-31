@@ -1,0 +1,17 @@
+generator client{
+    provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env ("DATABASE_URL")
+}
+
+model securityLog {
+    id String @id @default(uuid())
+    ipadress String
+    action String
+    riskLevel String
+    details String
+    createdat DateTime @default(now())
+}
